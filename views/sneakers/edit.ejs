@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("../partials/head.ejs") %>
+
+	<body>
+		<%- include("../partials/header.ejs") %>
+		<main>
+			<div>
+				<form action="/sneakers/<%= sneaker._id %>?_method=PUT" method="post">
+					<fieldset>
+						<legend>Edit a <%= sneaker.name %></legend>
+						<label>
+							Sneaker Name: <input
+								type="text"
+								name="name"
+								value="<%= sneaker.name %>"
+								placeholder="enter sneaker name"
+							/>
+						</label>
+						<label>
+							Sneaker Year: <input
+								type="number"
+								name="year"
+								value="<%= sneaker.year %>"
+								placeholder="enter sneaker year"
+							/>
+						</label>
+                        <label>
+							Sneaker Image: <input
+								type="image"
+								name="img"
+								value="<%= sneaker.img %>"
+								placeholder="enter sneaker url"
+							/>
+						</label>
+						<label>
+							Deadstock/O.G: <input type="checkbox" name="deadstock" <%=
+							sneaker.deadstock ? "checked" : "" %> />
+						</label>
+					</fieldset>
+					<input type="submit" value="Update <%= sneaker.name %>" />
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
