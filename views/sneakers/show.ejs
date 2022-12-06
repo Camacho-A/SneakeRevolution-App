@@ -7,12 +7,18 @@
 		<main>
 			<div>
 				<article>
-					<h2>
-						<%= sneaker.name %> - <%= sneaker.deadstock ? "Yes" : "No" %>
-					</h2>
-					<h3><%= sneaker.img %></h3>
+					<h2> <%= sneaker.name %> </h2>
+						<h4> Deadstock/O.G? <%= sneaker.deadstock ? "Yes" : "No" %></h4>
+					<img
+						class="showimg"
+						src="<%=sneaker.img %>"
+						alt="Picture of <%=sneaker.name %>"
+					/>
 					<a href="/sneakers/<%= sneaker._id %>/edit"><button>Edit</button></a>
-					<form action="/sneakers/<%= sneaker._id %>?_method=DELETE" method="POST">
+					<form
+						action="/sneakers/<%= sneaker._id %>?_method=DELETE"
+						method="POST"
+					>
 						<input type="submit" value="Delete" />
 					</form>
 					<a href="/sneakers/"><button>Back to Main</button></a>

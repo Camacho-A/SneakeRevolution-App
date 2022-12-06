@@ -10,7 +10,8 @@
 					<fieldset>
 						<legend>Edit a <%= sneaker.name %></legend>
 						<label>
-							Sneaker Name: <input
+							Sneaker Name:
+							<input
 								type="text"
 								name="name"
 								value="<%= sneaker.name %>"
@@ -18,16 +19,27 @@
 							/>
 						</label>
 						<label>
-							Sneaker Year: <input
-								type="number"
-								name="year"
-								value="<%= sneaker.year %>"
-								placeholder="enter sneaker year"
+							Sneaker Style:
+							<input
+								type="text"
+								name="style"
+								value="<%= sneaker.style %>"
+								placeholder="enter sneaker style"
 							/>
 						</label>
-                        <label>
-							Sneaker Image: <input
-								type="image"
+						<label>
+							Sneaker Rating:
+							<input
+								type="number"
+								name="rating"
+								value="<%= sneaker.rating %>"
+								placeholder="enter sneaker rating"
+							/>
+						</label>
+						<label>
+							Sneaker Image:
+							<input
+								type="text"
 								name="img"
 								value="<%= sneaker.img %>"
 								placeholder="enter sneaker url"

@@ -15,8 +15,10 @@ const router = express.Router()
 
 // index route
 router.get("/", (req, res) => {
-	Sneaker.find({}, (err, sneakers) => {
+	const id = req.params.id
+	Sneaker.find(id, (err, sneakers) => {
 		res.render("sneakers/index.ejs", { sneakers })
+		
 	})
 })
 
