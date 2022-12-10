@@ -11,6 +11,8 @@ mongoose.connection.on("open", () => {
 	const sneakers = [
 		{
 			name: "Air Jordan 1",
+			brand: "Nike",
+			year: 1985,
 			style: "High Tops",
 			rating: 10,
 			img: "https://i.ibb.co/j6sjVGX/jordan1.png",
@@ -18,6 +20,8 @@ mongoose.connection.on("open", () => {
 		},
 		{
 			name: "Air Max 1",
+			brand: "Nike",
+			year: 1985,
 			style: "Mid Tops",
 			rating: 9,
 			img: "https://i.ibb.co/r0Phcv2/airmax1.png",
@@ -25,13 +29,17 @@ mongoose.connection.on("open", () => {
 		},
 		{
 			name: "Air Force 1",
+			brand: "Nike",
+			year: 1985,
 			style: "Low Tops",
-			rating: 9.5,
+			rating: 9,
 			img: "https://i.ibb.co/fpFtvfC/airforce1.png",
 			deadstock: true,
 		},
 		{
 			name: "Air Huarache",
+			brand: "Nike",
+			year: 1985,
 			style: "Mid Tops",
 			rating: 7,
 			img: "https://i.ibb.co/MGhCjNX/airhuarache.png",
@@ -39,13 +47,17 @@ mongoose.connection.on("open", () => {
 		},
 		{
 			name: "Air Jordan XI",
+			brand: "Nike",
+			year: 1985,
 			style: "High Tops",
-			rating: 9.5,
+			rating: 9,
 			img: "https://i.ibb.co/ZWskYsj/airjordanxi.png",
 			deadstock: true,
 		},
 		{
 			name: "Dunk",
+			brand: "Nike",
+			year: 1985,
 			style: "High Tops",
 			rating: 8,
 			img: "https://i.ibb.co/BBy8wxY/nikedunk.png",

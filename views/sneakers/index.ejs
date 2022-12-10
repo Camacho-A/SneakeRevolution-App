@@ -3,23 +3,36 @@
 	<%- include("../partials/head.ejs") %>
 
 	<body>
+		<!-- <div class="loading-page">
+			<h2>Click Here</h2>
+			<img src="https://media.giphy.com/media/Z0qrajAVaSJcK87b9X/giphy.gif" alt="Loading Sneaker">
+            <a href="/sneakers/index"><button>View Collection</button></a>
+		</div> -->
 		<%- include("../partials/header.ejs") %>
 		<main>
-			<div>
+			<div class="container">
 				<!-- <a href="/user/logout"><button>Logout</button></a> -->
-				<a href="/sneakers/new"><button>Add A New Sneaker</button></a>
+				<a href="/sneakers/new"
+					><button class="add">Add A New Sneaker</button></a
+				>
 				<% for (sneaker of sneakers) { %>
 
-				<article>
-					<a href="/sneakers/<%= sneaker._id %>">
-						<h2>
-							<%= sneaker.name %> - <%= sneaker.deadstock ? "Yes" : "No" %>
-						</h2>
+				<article class="grid">
 					<a href="/sneakers/<%= sneaker.id %>">
-					<img class="img" src="<%= sneaker.img %>" />
-				</a>
+						<h2 class="name"><%= sneaker.name %></h2>
+					</a>
+
+					<a href="/sneakers/<%= sneaker.id %>">
+						<img class="img" src="<%= sneaker.img %>" />
 					</a>
 				</article>
+
+				<a href="/sneakers/<%= sneaker._id %>/edit"><button class="edit">Edit</button></a>
+				<form
+					action="/sneakers/<%= sneaker._id %>?_method=DELETE"
+					method="POST">
+					<input class="delete" type="submit" value="Delete" />
+				</form>
 
 				<% } %>
 			</div>

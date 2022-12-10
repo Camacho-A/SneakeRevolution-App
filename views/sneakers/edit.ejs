@@ -18,6 +18,27 @@
 								placeholder="enter sneaker name"
 							/>
 						</label>
+						<br />
+						<label>
+							Sneaker Brand:
+							<input
+								type="text"
+								name="brand"
+								value="<%= sneaker.brand %>"
+								placeholder="enter sneaker brand"
+							/>
+						</label>
+						<br>
+						<label>
+							Sneaker Year:
+							<input
+								type="number"
+								name="year"
+								value="<%= sneaker.year %>"
+								placeholder="enter sneaker year"
+							/>
+						</label>
+						<br />
 						<label>
 							Sneaker Style:
 							<input
@@ -27,6 +48,7 @@
 								placeholder="enter sneaker style"
 							/>
 						</label>
+						<br />
 						<label>
 							Sneaker Rating:
 							<input
@@ -36,6 +58,7 @@
 								placeholder="enter sneaker rating"
 							/>
 						</label>
+						<br />
 						<label>
 							Sneaker Image:
 							<input
@@ -45,6 +68,7 @@
 								placeholder="enter sneaker url"
 							/>
 						</label>
+						<br />
 						<label>
 							Deadstock/O.G: <input type="checkbox" name="deadstock" <%=
 							sneaker.deadstock ? "checked" : "" %> />

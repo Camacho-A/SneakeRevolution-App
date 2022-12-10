@@ -13,6 +13,14 @@ const router = express.Router()
 // Routes
 /////////////////////////////////////////
 
+
+
+// // index route
+// router.get("/", (req, res) => {
+// 		res.render("loading.ejs")
+		
+// 	})
+
 // index route
 router.get("/", (req, res) => {
 	const id = req.params.id
@@ -40,6 +48,7 @@ router.get("/:id/edit", (req, res) => {
 	const id = req.params.id
 	Sneaker.findById(id, (err, sneaker) => {
 		res.render("sneakers/edit.ejs", { sneaker })
+			
 	})
 })
 

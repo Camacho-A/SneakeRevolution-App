@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("../partials/head.ejs") %>
+
+	<body>
+		<%- include("../partials/header.ejs") %>
+		<main>
+			<div>
+				<form action="/sneakers" method="post">
+					<fieldset>
+						<legend>New Sneaker</legend>
+						<label>
+							Name:
+							<input type="text" name="name" placeholder="enter sneaker name" />
+						</label>
+						<br />
+						<label>
+							Brand:
+							<input
+								type="text"
+								name="brand"
+								placeholder="enter sneaker brand"
+							/>
+						</label>
+						<br />
+						<label>
+							Year:
+							<input
+								type="number"
+								name="year"
+								placeholder="enter sneaker year"
+							/>
+						</label>
+						<br />
+						<label>
+							Style:
+							<input
+								type="text"
+								name="style"
+								placeholder="enter sneaker style"
+							/>
+						</label>
+						<br />
+						<label>
+							Rating:
+							<input
+								type="number"
+								name="rating"
+								placeholder="enter sneaker rating"
+							/>
+						</label>
+						<br />
+						<label>
+							Image:
+							<input type="text" name="img" placeholder="enter sneaker url" />
+						</label>
+						<br />
+						<label>
+							Deadstock/O.G: <input type="checkbox" name="deadstock" />
+						</label>
+					</fieldset>
+					<input type="submit" value="Create a New Sneaker" />
+				</form>
+                <a href="/sneakers/"><button>Back to Main</button></a>
+			</div>
+		</main>
+	</body>
+</html>
