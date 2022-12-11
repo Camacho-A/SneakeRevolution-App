@@ -13,14 +13,6 @@ const router = express.Router()
 // Routes
 /////////////////////////////////////////
 
-
-
-// // index route
-// router.get("/", (req, res) => {
-// 		res.render("loading.ejs")
-		
-// 	})
-
 // index route
 router.get("/", (req, res) => {
 	const id = req.params.id
@@ -57,7 +49,7 @@ router.put("/:id", (req, res) => {
 	const id = req.params.id
 	req.body.deadstock = req.body.deadstock === "on" ? true : false
 	Sneaker.findByIdAndUpdate(id, req.body, { new: true }, (err, sneaker) => {
-		res.redirect("/sneakers")
+		res.redirect("/sneakers/")
 	})
 })
 

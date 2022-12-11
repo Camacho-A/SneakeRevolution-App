@@ -4,7 +4,7 @@
 const { urlencoded } = require("express")
 const mongoose = require("./connection")
 const Sneaker = require("./sneaker")
-// const img = require("../images/")
+
 
 
 mongoose.connection.on("open", () => {

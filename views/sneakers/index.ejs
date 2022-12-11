@@ -2,11 +2,9 @@
 <html lang="en">
 	<%- include("../partials/head.ejs") %>
 
-	<body>
+	<body class="index-page">
 		<!-- <div class="loading-page">
-			<h2>Click Here</h2>
 			<img src="https://media.giphy.com/media/Z0qrajAVaSJcK87b9X/giphy.gif" alt="Loading Sneaker">
-            <a href="/sneakers/index"><button>View Collection</button></a>
 		</div> -->
 		<%- include("../partials/header.ejs") %>
 		<main>
@@ -25,14 +23,18 @@
 					<a href="/sneakers/<%= sneaker.id %>">
 						<img class="img" src="<%= sneaker.img %>" />
 					</a>
+					<div>
+						<a href="/sneakers/<%= sneaker._id %>/edit"
+							><button class="edit">🖋️</button></a
+						>
+						<form
+							action="/sneakers/<%= sneaker._id %>?_method=DELETE"
+							method="POST"
+						>
+							<input class="delete" type="submit" value="🗑️" />
+						</form>
+					</div>
 				</article>
-
-				<a href="/sneakers/<%= sneaker._id %>/edit"><button class="edit">Edit</button></a>
-				<form
-					action="/sneakers/<%= sneaker._id %>?_method=DELETE"
-					method="POST">
-					<input class="delete" type="submit" value="Delete" />
-				</form>
 
 				<% } %>
 			</div>

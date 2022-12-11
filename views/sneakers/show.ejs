@@ -2,30 +2,34 @@
 <html lang="en">
 	<%- include("../partials/head.ejs") %>
 
-	<body>
+	<body class="show-page">
 		<%- include("../partials/header.ejs") %>
 		<main>
-			<div>
+			<div class="showcontainer">
 				<article>
-					<h2> <%= sneaker.name %> </h2>
-					<h4> Brand: <%= sneaker.brand %></h4>
-					<h4> Release Year: <%= sneaker.year %></h4>
-					<h4> Style: <%= sneaker.style %></h4>
-					<h4> Rating: <%= sneaker.rating %></h4>
-					<h4> Deadstock/O.G? <%= sneaker.deadstock ? "Yes" : "No" %></h4>
+					<h2><%= sneaker.name %></h2>
+					<h4>Brand: <%= sneaker.brand %></h4>
+					<h4>Release Year: <%= sneaker.year %></h4>
+					<h4>Style: <%= sneaker.style %></h4>
+					<h4>Rating: <%= sneaker.rating %></h4>
+					<h4>Deadstock/O.G? <%= sneaker.deadstock ? "Yes" : "No" %></h4>
 					<img
 						class="showimg"
 						src="<%=sneaker.img %>"
 						alt="Picture of <%=sneaker.name %>"
 					/>
-					<a href="/sneakers/<%= sneaker._id %>/edit"><button>Edit</button></a>
+					<a href="/sneakers/<%= sneaker._id %>/edit"
+						><button class="showedit">Edit</button></a
+					>
 					<form
 						action="/sneakers/<%= sneaker._id %>?_method=DELETE"
 						method="POST"
 					>
-						<input type="submit" value="Delete" />
+						<input class="showdelete" type="submit" value="Delete" />
 					</form>
-					<a href="/sneakers/"><button>Back to Main</button></a>
+					<a href="/sneakers/"
+						><button class="showback">Back to Main</button></a
+					>
 				</article>
 			</div>
 		</main>

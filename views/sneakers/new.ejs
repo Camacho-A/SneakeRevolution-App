@@ -5,10 +5,10 @@
 	<body>
 		<%- include("../partials/header.ejs") %>
 		<main>
-			<div>
-				<form action="/sneakers" method="post">
+			<div class="update-container">
+				<form class="new" action="/sneakers" method="post">
 					<fieldset>
-						<legend>New Sneaker</legend>
+						<legend class="newtitle">New Sneaker</legend>
 						<label>
 							Name:
 							<input type="text" name="name" placeholder="enter sneaker name" />
@@ -59,9 +59,9 @@
 							Deadstock/O.G: <input type="checkbox" name="deadstock" />
 						</label>
 					</fieldset>
-					<input type="submit" value="Create a New Sneaker" />
+					<input class="create" type="submit" value="Create a New Sneaker" />
+					<a href="/sneakers/"><button class="back-btn"">Back to Main</button></a>
 				</form>
-                <a href="/sneakers/"><button>Back to Main</button></a>
 			</div>
 		</main>
 	</body>
