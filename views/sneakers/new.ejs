@@ -2,10 +2,10 @@
 <html lang="en">
 	<%- include("../partials/head.ejs") %>
 
-	<body>
+	<body class="new-page">
 		<%- include("../partials/header.ejs") %>
 		<main>
-			<div class="update-container">
+			<div class="new-container">
 				<form class="new" action="/sneakers" method="post">
 					<fieldset>
 						<legend class="newtitle">New Sneaker</legend>
@@ -58,10 +58,10 @@
 						<label>
 							Deadstock/O.G: <input type="checkbox" name="deadstock" />
 						</label>
+						<input class="create" type="submit" value="Create a New Sneaker" />
 					</fieldset>
-					<input class="create" type="submit" value="Create a New Sneaker" />
-					<a href="/sneakers/"><button class="back-btn"">Back to Main</button></a>
 				</form>
+				<a href="/sneakers/"><button class="back-btn">Back to Main</button></a>
 			</div>
 		</main>
 	</body>

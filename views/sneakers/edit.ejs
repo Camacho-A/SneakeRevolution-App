@@ -2,7 +2,7 @@
 <html lang="en">
 	<%- include("../partials/head.ejs") %>
 
-	<body>
+	<body class="edit-page">
 		<%- include("../partials/header.ejs") %>
 		<main>
 			<div class="editform">
@@ -78,10 +78,10 @@
 						type="submit"
 						value="Update <%= sneaker.name %>"
 					/>
-					<a href="/sneakers/"
-						><button class="editback">Back to Main</button></a
-					>
 				</form>
+				<a href="/sneakers/"
+				><button class="editback">Back to Main</button></a
+				>
 			</div>
 		</main>
 	</body>

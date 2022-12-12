@@ -62,7 +62,7 @@ mongoose.connection.on("open", () => {
 			rating: 8,
 			img: "https://i.ibb.co/BBy8wxY/nikedunk.png",
 			deadstock: false,
-		},
+		}
 	]
 	Sneaker.deleteMany({}, (err, data) => {
 		Sneaker.create(sneakers, (err, data) => {

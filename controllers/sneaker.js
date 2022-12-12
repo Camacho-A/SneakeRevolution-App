@@ -9,17 +9,56 @@ const Sneaker = require("../models/sneaker")
 /////////////////////////////////////////
 const router = express.Router()
 
+
 /////////////////////////////////////////
 // Routes
 /////////////////////////////////////////
 
 // index route
+
 router.get("/", (req, res) => {
 	const id = req.params.id
 	Sneaker.find(id, (err, sneakers) => {
 		res.render("sneakers/index.ejs", { sneakers })
 		
 	})
+})
+
+
+////////////////////////////////////////
+// Router Middleware
+////////////////////////////////////////
+// Authorization Middleware
+router.use((req, res, next) => {
+	// else {
+	// 	res.redirect("/user/login");
+	// 	} 
+	if (!req.session.loggedIn) {
+		res.redirect("/user/login")
+	}
+	if (req.session.loggedIn) {
+		next();
+	} 
+});
+
+router.get("/", (req, res) => {
+	Sneaker.find(
+		{
+			username: req.session.username,
+		},
+		(err, sneakers) => {
+			res.render("sneakers/index.ejs", { sneakers })
+		}
+	)
+})
+
+router.get("/", (req, res) => {
+	console.log(req.session)
+	Sneaker.find({})
+		.then((sneakers) => {
+			res.render("sneakers/index.ejs", { sneakers })
+		})
+		.catch((err) => console.log(err))
 })
 
 //new route
