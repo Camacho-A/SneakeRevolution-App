@@ -43,7 +43,7 @@ router.post("/login", (req, res) => {
 	User.findOne({ username }, (err, user) => {
 		// checking if user exists
 		if (!user) {
-			res.send("user doesn't exist")
+			res.send("Sorry, user doesn't exist. Please head over to the Signup tab. ☺️")
 		} else {
 			//check if password matches
 			const result = bcrypt.compareSync(password, user.password)
@@ -52,7 +52,7 @@ router.post("/login", (req, res) => {
 				req.session.loggedIn = true
 				res.redirect("/sneakers")
 			} else {
-				res.send("wrong password")
+				res.send("You have entered the wrong password. Please try again!")
 			}
 		}
 	})

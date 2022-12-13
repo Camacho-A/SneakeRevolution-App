@@ -2,22 +2,23 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body>
+  <body class="login-page">
     <%- include("../partials/header.ejs") %>
     <main>
       <div>
-        <form action="/user/login" method="post">
-          <fieldset>
-            <legend>User Login</legend>
+        <form class="login" action="/user/login" method="post">
+          <fieldset id="fieldset">
+            <legend class="usertitle">User Login</legend>
             <label
               >USERNAME: <input type="text" name="username" required />
             </label>
             <label
               >PASSWORD: <input type="password" name="password" required />
             </label>
-            <input type="submit" value="Login" />
+            <input class="login-btn" type="submit" value="Login" />
           </fieldset>
         </form>
+        <a href="/user/signup"><button id="sign-btn">Not a User? Click Here to Signup</button></a>
       </div>
     </main>
   </body>
